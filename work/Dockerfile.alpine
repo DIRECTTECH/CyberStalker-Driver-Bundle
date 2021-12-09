@@ -1,0 +1,27 @@
+#
+# Copyright: Pixel Networks <support@pixel-networks.com> 
+# Author: Oleg Borodin <oleg.borodin@pixel-networks.com>
+#
+FROM golang:1.16.2-alpine
+
+ENV HOME=/app
+RUN mkdir $HOME
+
+WORKDIR /go/src/app
+
+COPY . .
+ENV CGO_ENABLED=0 
+RUN go build pmdrv.go
+RUN cp pmdrv $HOME 
+ADD pmdrv.yml $HOME/
+ADD start-drv $HOME/
+
+
+RUN rm -rf /go/src/app
+
+ENV DATADIR=/pgdata
+RUN mkdir -p $DATADIR/ 
+ADD pmdata/* $DATADIR/
+
+CMD $HOME/start-drv
+#EOF

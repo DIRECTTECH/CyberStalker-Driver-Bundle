@@ -1,0 +1,101 @@
+
+// SENSO8/nbiot/data/<IMEI>
+// IMEI: AA-BBBBBB-CCCCCC-D
+// IMEI: AA-BBBBBB-CCCCCC-EE
+
+
+{
+    "ver": protocol_version,
+    "sn": sensor_imei,
+    "iccid": sim_iccid,
+    "heartbeat": heartbeat_interval,
+    "rssi_filter": ble_rssi_threshold,
+    "low_batt": low_batt_alert_lvl,
+    "batt_pwr_alert": en_batt_pwr_alert,
+    "reg_timeout": nbiot_reg_timeout,
+    "band": [band_1, band_2, ..., band_n],
+    "repeat": repeat_config,
+    "report": regular_report_interval,
+    "local_port": local_tcp_port_option,
+    "psm": psm_config,
+    "en_shutdown": enable_shutdown,
+    "firmware": firmware_version,
+    "client_prefix": client_prefix ,
+    "topic_prefix": topic_prefix,
+    "stat": stat_info
+}
+
+
+// BLE type 1
+
+{
+    "ver":protocol_version,
+    "msg":msg_seq_no,
+    "time":epoch_time,
+    "sn":sensor_imei,
+    "type":payload_type,
+    "ble_type":ble_type,
+    "ble_addr":ble_addr,
+    "temp":temperature,
+    "RH":humidity,
+    "ble_alert": [lo_temp_alert, hi_temp_alert, lo_humi_alert, hi_humi_alert],
+    "ble_rssi":ble_rssi,
+    "ble_batt":sensor_batt_percent,
+    "RAT":radio_type,
+    "rssi":radio_rssi,
+    "rsrp":radio_rsrp,
+    "rsrq": radio_rsrq ,
+    "ci":radio_ci,
+    "tac": radio_tac,
+    "bat":battery_volt,
+    "batt_pow":batt_pow,
+    "event":event_type,
+    "debug":debug_info
+}
+
+// BLE type 2
+
+{
+    "ver":protocol_version,
+    "msg":msg_seq_no,
+    "time":epoch_time,
+    "sn":sensor_imei,
+    "type":payload_type,
+    "ble_type":ble_type,
+    "ble_addr":ble_addr,
+    "ble_adv_manu":ble_adv_manu_data,
+    "ble_rssi":ble_rssi,
+    "RAT":radio_type,
+    "rssi":radio_rssi,
+    "rsrp":radio_rsrp,
+    "rsrq": radio_rsrq ,
+    "ci":radio_ci,
+    "tac": radio_tac,
+    "bat":battery_volt,
+    "batt_pow ":batt_pow,
+    "event ":event_type,
+    "debug":debug_info
+}
+
+// BLE type 3
+
+{
+    "ver": protocol_version,
+    "sn": sensor_imei,
+    "iccid": sim_iccid,
+    "heartbeat": heartbeat_interval,
+    "rssi_filter": ble_rssi_threshold,
+    "low_batt": low_batt_alert_lvl,
+    "batt_pwr_alert": en_batt_pwr_alert,
+    "reg_timeout": nbiot_reg_timeout,
+    "band": [band_1, band_2, ..., band_n],
+    "repeat": repeat_config,
+    "report": regular_report_interval,
+    "local_port": local_tcp_port_option,
+    "psm": psm_config,
+    "en_shutdown": enable_shutdown,
+    "firmware": firmware_version,
+    "client_prefix": client_prefix ,
+    "topic_prefix": topic_prefix,
+    "stat": stat_info
+}
